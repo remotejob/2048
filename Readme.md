@@ -10,4 +10,8 @@ git branch -M main
 
 git remote add origin https://github.com/remotejob/2048.git
 
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_github
+
 git push -u origin main
