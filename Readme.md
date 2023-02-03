@@ -14,4 +14,8 @@ eval "$(ssh-agent -s)"
 
 ssh-add ~/.ssh/id_github
 
+git remote set-url origin https://<githubtoken>@github.com/remotejob/2048.git
+
 git push -u origin main
+
+kubectl apply -f flux.yaml
