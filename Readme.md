@@ -1,3 +1,5 @@
+https://earthly.dev/blog/k8s-gitops-with-fluxcd/
+
 kubectl create namespace 2048-game
 
 git add .
@@ -19,3 +21,5 @@ git remote set-url origin https://<githubtoken>@github.com/remotejob/2048.git
 git push -u origin main
 
 kubectl apply -f flux.yaml
+
+kubectl port-forward service/game-service 8086:80 -n 2048-game
